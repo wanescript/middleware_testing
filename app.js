@@ -6,6 +6,7 @@ const port = 3000;
 
 app.use(logger);
 
+
 app.get('/', (req,res)=> {
     res.send('homepage')
 })
@@ -26,4 +27,4 @@ app.get('/logout', logOut, (req,res)=> {
 
 
 
-app.listen(port,()=>console.log(`we up on port${port}`));
+app.listen(port,()=>console.log(`Server is running on port ${port}`));
