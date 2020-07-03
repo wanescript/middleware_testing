@@ -1,0 +1,1 @@
+Practicing writing middleware and getting use to organizing files, to avoid a lot of extra clutter.
