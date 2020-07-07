@@ -1,7 +1,12 @@
 const express = require('express');
 
-function logger (req,res,next){
-    console.log('logging dis shingdig');
+// function logger (req,res,next){
+//     console.log('a visitor is on the homepage');
+//     next();
+//     }
+
+function register (req,res,next){
+    console.log('user is on the register page');
     next();
     }
     
@@ -20,4 +25,4 @@ function logger (req,res,next){
     next();
     }
 
-    module.exports = { logger, login, auth, logOut};
+    module.exports = { login, auth, logOut, register};
