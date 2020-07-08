@@ -1,9 +1,5 @@
 const express = require('express');
 
-// function logger (req,res,next){
-//     console.log('a visitor is on the homepage');
-//     next();
-//     }
 
 function register (req,res,next){
     console.log('user is on the register page');
