@@ -4,10 +4,14 @@ const app = express();
 const port = 3000;
 
 
+
 app.use(routes);
 
 app.get('/', (req,res)=> {
-    res.send('homepage');
+    res.send('homepage. Welcome to our shindig!');
+    let d = new Date();
+    let timestamp = d.getTime();
+    console.log(`User ip is :${req.ip} at ${timestamp}`)
 });
 
 

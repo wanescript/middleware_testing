@@ -1,5 +1,5 @@
 const express = require('express');
-const {login, auth, logOut, register}= require('../middleware');
+const {login, auth, logOut, register} = require('../middleware');
 let router = express.Router();
 
 
@@ -8,7 +8,9 @@ let router = express.Router();
 
 
 router.get('/register', register, (req,res)=> {
-    res.send('sign up to register')
+    res.send('sign up to register');
+    console.log(req.protocol)
+ 
 })
 
 router.get('/login', login, (req,res)=> {

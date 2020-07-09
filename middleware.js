@@ -7,7 +7,7 @@ function register (req,res,next){
     }
     
     function login (req,res,next){
-        console.log('user logged in at');
+        console.log('user is at the login page');
         next();
         }
     
