@@ -9,8 +9,7 @@ app.use(routes);
 
 app.get('/', (req,res)=> {
     res.send('homepage. Welcome to our shindig!');
-    let d = new Date();
-    let timestamp = d.getTime();
+    let timestamp = Date.now();
     console.log(`User ip is :${req.ip} at ${timestamp}`)
 });
 
