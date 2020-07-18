@@ -1,4 +1,5 @@
 const express = require('express');
+const os = require('os')
 const {login, auth, logOut, register} = require('../middleware');
 let router = express.Router();
 
@@ -24,6 +25,8 @@ router.get('/users', auth, (req,res)=> {
 
 router.get('/logout', logOut, (req,res)=> {
     res.send('User log out redirect to homepage');
+    let timestamp = Date.now();
+    console.log(`User ip is :${req.ip} at the time of${timestamp} with a ${os.platform()} OS just exited the building...!`)
     
 })
 
