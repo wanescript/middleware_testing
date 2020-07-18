@@ -1,9 +1,10 @@
 const express = require('express');
+const morgan = require('morgan')
 const {login, auth, logOut, register} = require('../middleware');
 let router = express.Router();
 
 
-// router.use();
+//router.use()
 //example of using middleware with router
 
 
