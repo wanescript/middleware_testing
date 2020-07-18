@@ -14,8 +14,8 @@ app.use(routes);
 app.get('/', (req,res)=> {
     res.send('homepage. Welcome to da spot visitor...!');
     let timestamp = Date.now();
-    console.log(`User ip is :${req.ip} at the time of${timestamp} with a ${os.platform()} OS`)
-  
+    console.log(`User ip is :${req.ip} at the time of${timestamp} with a ${os.platform()} OS`);
+    
 });
 
 
