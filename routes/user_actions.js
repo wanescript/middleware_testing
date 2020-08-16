@@ -1,6 +1,6 @@
 const express = require('express');
 const os = require('os')
-const {login, auth, logOut, register} = require('../middleware');
+const {login, dashboard, logOut, register} = require('../middleware');
 let router = express.Router();
 
 
@@ -18,8 +18,8 @@ router.get('/login', login, (req,res)=> {
     res.send('please log in')
 })
 
-router.get('/users', auth, (req,res)=> {
-    res.send('users page');
+router.get('/users', dashboard, (req,res)=> {
+    res.send('users dashboard page');
     
 })
 

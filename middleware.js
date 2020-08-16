@@ -11,7 +11,7 @@ function register (req,res,next){
         next();
         }
     
-    function auth (req,res,next){
+    function dashboard (req,res,next){
     console.log('authenticated user permission');
     next();
     }
@@ -21,4 +21,4 @@ function register (req,res,next){
     next();
     }
 
-    module.exports = { login, auth, logOut, register};
+    module.exports = { login, dashboard, logOut, register};
