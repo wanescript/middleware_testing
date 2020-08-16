@@ -4,7 +4,6 @@ const helmet = require('helmet')
 const morgan = require('morgan')
 const {DateTime} = require('luxon');
 const os = require('os');
-const { DH_CHECK_P_NOT_SAFE_PRIME } = require('constants');
 const app = express();
 const port = 3000;
 
