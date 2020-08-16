@@ -4,6 +4,7 @@ const helmet = require('helmet')
 const morgan = require('morgan')
 const {DateTime} = require('luxon');
 const os = require('os');
+const { DH_CHECK_P_NOT_SAFE_PRIME } = require('constants');
 const app = express();
 const port = 3000;
 
@@ -11,12 +12,11 @@ const port = 3000;
 app.use(helmet());
 app.use(morgan('short'));
 app.use(routes);
-DateTime.local();
 
 app.get('/', (req,res)=> {
     res.send('homepage. Welcome to da spot visitor...!');
-    console.log(`User ip is :${req.ip} at the time of ${DateTime.local().toLocaleString(DateTime.DATE_FULL)} with a ${os.platform()} OS`);
-    
+    console.log(`User ip is :${req.ip}, while arriving on the date of ${DateTime.local().toLocaleString({ weekday: 'short', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit' })
+} using a ${os.platform()} OS`);
 });
 
 
