@@ -17,7 +17,7 @@ app.use(routes);
 
 app.get('/', (req,res)=> {
     res.send('homepage. Welcome to da spot visitor...!');
-    console.log('We have a visit from a user....')
+    console.log('We have a visitor ....')
 });
 
 
