@@ -6,7 +6,8 @@ const os = require('os');
 
 
 function logger (req,res,next) {
-    console.log(`User ip is :${req.ip}, while arriving on the date of ${DateTime.local().toLocaleString({ weekday: 'short', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit' })} using a ${os.platform()} OS`);
+    console.log(`User ip is :${req.ip}, while arriving on the date of ${DateTime. local().toLocaleString({ weekday: 'short', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit' })} ${DateTime.local().toSQL({includeZone:true})} using a ${os.platform()} OS`);
+
     next();
 
     }
