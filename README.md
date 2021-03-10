@@ -6,4 +6,4 @@ __ ^^**__ _resources_: npm link below. __^^** __
 
 ---
 
-{HM}
+
